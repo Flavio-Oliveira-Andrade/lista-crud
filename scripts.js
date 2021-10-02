@@ -1,8 +1,27 @@
-alert("ola meu to-do-list")
+const createTask = document.querySelector("#inputNewTask")
+const btnCreateTask = document.querySelector("#btnCreate")
+const listaTask = document.querySelector("#listaTask")
 
-const createTask = document.querySelector("inputNewTask")
-const btnCreateTask = document.querySelector("btnCreate")
-const listaTask = document.querySelector("listaTask")
+
+createTask.addEventListener("keypress",(event) => {
+  if(event.keyCode == 13){
+    let task = {
+      name: createTask.value,
+      id: creatId(),
+    }
+    addTask(task)
+  }
+});
+
+btnCreateTask.addEventListener('click', (event)=>{
+
+    let task = {
+      name: createTask.value,
+      id: creatId(),
+    }
+    addTask(task)
+});
+
 
 const creatId = ()=> {
   return Math.floor(Math.random()*5000);
@@ -28,10 +47,13 @@ const createTagLi = (task)=> {
   let btnUpdate = document.createElement("button")
   btnUpdate.classList.add("btnAction")
   btnUpdate.innerHTML = '<i class="fa fa-pencil"></i>'
+  btnUpdate.setAttribute('onclick', 'updateItem('+task.id+')' )
 
   let btnDelete = document.createElement("button")
   btnDelete.classList.add("btnAction")
   btnDelete.innerHTML = ' <i class="fa fa-trash"></i>'
+  btnDelete.setAttribute('onclick', 'deleteItem('+task.id+')' )
+
 
   div.appendChild(btnUpdate)
   div.appendChild(btnDelete)
@@ -42,29 +64,11 @@ const createTagLi = (task)=> {
   return li;
 }
 
-createTask.addEventListener('keypress',(event) => {
-  if(event.keyCode == 13){
-    let task = {
-      nome: createTask.value,
-      id: creatId(),
-    }
-    addTask(task)
-  }
-});
+const updateItem =(taskId) => {
+  alert(taskId)
+}
 
-btnCreateTask.addEventListener('click', (event)=>{
-
-  if(event.keyCode == 13){
-    let task = {
-      name: createTask.value,
-      id: creatId(),
-    }
-    addTask(task)
-  }
-});
-
-// document.addEventListener ('keypress', (event) => {
-//   const keyName = event.key;
-//   alert ('keypress event \ n \ n' + 'chave:' + keyName);
-// });
+const deleteItem = (taskId) => {
+  alert(taskId)
+}
 
