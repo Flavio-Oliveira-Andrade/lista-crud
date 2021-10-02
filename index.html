@@ -9,13 +9,27 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="conteudo">
+
+  <div class="content">
+
     <div class="topo">
-      <input type="text" id="inputNovaTarefa" placeholder="adicioneTarefa">
-      <button id="btnAddTarefa">
-        <i class="fa fa-plus"
+      <input type="text" id="inputNewTask" placeholder="Escreva Aqui">
+      <button id="btnCreate">
+        <i class="fa fa-plus"></i>
       </button>
     </div>
+    <ul id="listaTask">
+      <li>
+        <span class="textoTarefa">Tarafe-1</span>
+        <button class="btnUpdate">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="btnDelete">
+          <i class="fa fa-trash"></i>
+        </button>
+      </li>
+    </ul>
+
   </div>
 
 </body>
