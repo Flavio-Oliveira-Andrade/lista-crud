@@ -9,7 +9,7 @@ body {
 .content {
   margin: 0 auto;
   width: 100%;
-  max-width: 760px;
+  max-width: 60%;
   margin-top: 45px;
   margin-bottom: 45px;
   background-color: #2b2a2a;
@@ -24,7 +24,7 @@ body {
 }
 
 .topo input {
-  width: 600px;
+  width: 85%;
   padding: 12px;
   border-radius: 15px;
   border: 1px solid #191818;
@@ -32,10 +32,11 @@ body {
   font-size: 1.1rem;
   background-color: #252424;
   color: #fff;
+  border: 2px solid rgb(51, 50, 50);
 }
 
 .topo button {
-  width: 43px;
+  width: 45px;
   border-radius: 12px;
   border: 1px solid #191818;
   background: #252424;;
@@ -56,10 +57,30 @@ body {
 }
 
 #listaTask li {
-  padding : 12px;
+  padding : 8px;
   background: #252424;
   border: 2px solid rgb(51, 50, 50);
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
+  align-items:center;
+}
+
+.btnAction {
+  border-radius: 10px;
+  border: 1px solid #191818;
+  background: #252424;;
+  color: #fff;
+  outline: none;
+  padding: 0.6em;
+  width: 38px;
+  margin-right: 5px;
+
+
+}
+
+.btnAction:hover{
+  background: #181616;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
