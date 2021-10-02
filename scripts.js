@@ -37,6 +37,7 @@ const addTask = (task)=> {
 const createTagLi = (task)=> {
 
   let li = document.createElement("li")
+  li.id = task.id;
 
   let span = document.createElement("span")
   span.classList.add("textoTarefa")
@@ -69,6 +70,12 @@ const updateItem =(taskId) => {
 }
 
 const deleteItem = (taskId) => {
-  alert(taskId)
+  let confirm = window.confirm('Are you sure')
+  if(confirm) {
+    let li = document.getElementById(""+taskId+"")
+      if(li){
+        listaTask.removeChild(li)
+      }
+  }
 }
 
