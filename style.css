@@ -46,4 +46,20 @@ body {
 .topo button:hover{
   background: #181616;
   border: 1px solid #fff;
+  cursor: pointer;
+}
+
+#listaTask {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#listaTask li {
+  padding : 12px;
+  background: #252424;
+  border: 2px solid rgb(51, 50, 50);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
 }
