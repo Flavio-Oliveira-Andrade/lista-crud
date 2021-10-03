@@ -3,6 +3,21 @@
   --body-bg: #252424;
 
 }
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  margin-top:  5px;
+  flex-direction: row;
+
+}
+
+.container input {
+  width: 50px;
+  height: 30px;
+  background-color:rgb(32, 31, 31);
+}
+
 
 body {
   background: var(--body-bg);
