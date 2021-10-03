@@ -2,6 +2,13 @@ const createTask = document.querySelector("#inputNewTask")
 const btnCreateTask = document.querySelector("#btnCreate")
 const listaTask = document.querySelector("#listaTask")
 
+const winEdit = document.querySelector("#winEdit")
+const winEditFundo = document.querySelector("#winEditFundo")
+const winEditBtnClose = document.querySelector("#winEditBtnClose")
+const btnUpdateTtask = document.querySelector("#btnUpdateTtask")
+const idtaskUpdate = document.querySelector("#idtaskUpdate")
+const inputTaskEdit = document.querySelector("#inputTaskEdit")
+
 
 createTask.addEventListener("keypress",(event) => {
   if(event.keyCode == 13){
@@ -21,6 +28,24 @@ btnCreateTask.addEventListener('click', (event)=>{
     }
     addTask(task)
 });
+
+btnUpdateTtask.addEventListener('click', (event)=>{
+  event.preventDefault();
+  let idTask = idtaskUpdate.innerHTML.replace('#', '')
+
+    let task ={
+      name: inputTaskEdit.value,
+      id: idTask,
+    }
+    let taskEdit = document.getElementById(''+idTask+'');
+      if(taskEdit){
+        let li = createTagLi(task)
+        listaTask.replaceChild(li, taskEdit)
+        tuggleWinEdit()
+      }else{
+        alert("Please select a task")
+      }
+})
 
 
 const creatId = ()=> {
@@ -66,7 +91,15 @@ const createTagLi = (task)=> {
 }
 
 const updateItem =(taskId) => {
-  alert(taskId)
+
+  let li = document.getElementById(""+taskId+"")
+    if(li){
+      idtaskUpdate.innerHTML = "#" + taskId
+      inputTaskEdit.value = li.innerText
+      tuggleWinEdit();
+    }else{
+      alert("Please select a task")
+    }
 }
 
 const deleteItem = (taskId) => {
@@ -77,5 +110,10 @@ const deleteItem = (taskId) => {
         listaTask.removeChild(li)
       }
   }
+}
+
+const tuggleWinEdit =() => {
+  winEdit.classList.toggle('open')
+  winEditFundo.classList.toggle('open')
 }
 
