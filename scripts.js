@@ -29,6 +29,10 @@ btnCreateTask.addEventListener('click', (event)=>{
     addTask(task)
 });
 
+winEditBtnClose.addEventListener('click', (event)=>{
+  tuggleWinEdit()
+})
+
 btnUpdateTtask.addEventListener('click', (event)=>{
   event.preventDefault();
   let idTask = idtaskUpdate.innerHTML.replace('#', '')
