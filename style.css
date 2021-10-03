@@ -77,7 +77,10 @@ body {
   width: 38px;
   margin-right: 5px;
 
+}
 
+.textoTarefa{
+  overflow: hidden;
 }
 
 .btnAction:hover{
