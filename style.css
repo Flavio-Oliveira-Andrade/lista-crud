@@ -1,16 +1,28 @@
+:root {
+  --body-color: #fafafa;
+  --body-bg: #252424;
+
+}
+
 body {
-  background: #252424;
-  color: #ffffff;
+  background: var(--body-bg);
+  color: var(--body-color);
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
+}
+
+.container{
+  background-color:rgb(32, 31, 31);
+  width: 100%;
+  height:60px;
 }
 
 .content {
   margin: 0 auto;
   width: 100%;
   max-width: 60%;
-  margin-top: 45px;
+  margin-top: 25px;
   margin-bottom: 45px;
   background-color: #2b2a2a;
   padding: 48px;
@@ -30,8 +42,8 @@ body {
   border: 1px solid #191818;
   outline: none;
   font-size: 1.1rem;
-  background-color: #252424;
-  color: #fff;
+  background-color: var(--body-bg);
+  color: var(--body-color);
   border: 2px solid rgb(51, 50, 50);
 }
 
@@ -39,14 +51,14 @@ body {
   width: 45px;
   border-radius: 12px;
   border: 1px solid #191818;
-  background: #252424;;
-  color: #fff;
+  background: var(--body-bg);
+  color: var(--body-color);
   outline: none;
 }
 
 .topo button:hover{
   background: #181616;
-  border: 1px solid #fff;
+  border: 1px solid var(--body-color);
   cursor: pointer;
 }
 
@@ -58,7 +70,7 @@ body {
 
 #listaTask li {
   padding : 8px;
-  background: #252424;
+  background: var(--body-bg);
   border: 2px solid rgb(51, 50, 50);
   border-radius: 15px;
   display: flex;
@@ -71,7 +83,7 @@ body {
   border-radius: 10px;
   border: 1px solid #191818;
   background: #252424;;
-  color: #fff;
+  color: var(--body-color);
   outline: none;
   padding: 0.6em;
   width: 38px;
@@ -88,7 +100,7 @@ body {
 
 .btnAction:hover{
   background: #181616;
-  border: 1px solid #fff;
+  border: 1px solid var(--body-color);
   cursor: pointer;
 }
 
@@ -136,15 +148,15 @@ body {
   height: 45px;
   border-radius: 10px;
   border: 1px solid #191818;
-  background: #252424;;
-  color: #fff;
+  background: var(--body-bg);
+  color: var(--body-color);
   outline: none;
   cursor: pointer;
 }
 
 #winEditBtnClose:hover {
   background: #181616;
-  border: 1px solid #fff;
+  border: 1px solid var(--body-color);
   cursor: pointer;
 }
 
@@ -168,8 +180,8 @@ form {
   border-radius: 8px;
   outline: none;
   font-size: 1.1rem;
-  background-color: #252424;
-  color: #fff;
+  background-color: var(--body-bg);
+  color: var(--body-color);
   border: 2px solid rgb(51, 50, 50);
 }
 
@@ -177,8 +189,8 @@ form {
   margin: auto;
   width: 90px;
   height: 45px;
-  background-color: #252424;
-  color: #fff;
+  background-color: var(--body-bg);
+  color: var(--body-color);
   border: 2px solid rgb(51, 50, 50);
   padding: 10px;
   border-radius: 8px;
@@ -189,7 +201,7 @@ form {
 
 .frm-rons button:hover{
   background: #181616;
-  border: 1px solid #fff;
+  border: 1px solid var(--body-color);
   cursor: pointer;
 }
 
