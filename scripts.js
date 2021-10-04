@@ -9,6 +9,27 @@ const btnUpdateTtask = document.querySelector("#btnUpdateTtask")
 const idtaskUpdate = document.querySelector("#idtaskUpdate")
 const inputTaskEdit = document.querySelector("#inputTaskEdit")
 
+const $html = document.querySelector('html')
+const $checkbox = document.querySelector('#rosa')
+const $checkbo = document.querySelector('#amarelo')
+const $checkb = document.querySelector('#mar')
+const $check = document.querySelector('#rosa2')
+
+$checkbox.addEventListener('change', () => {
+  $html.classList.toggle('dark-mode')
+})
+
+$checkbo.addEventListener('change', () => {
+  $html.classList.toggle('yellom-mode')
+})
+
+$checkb.addEventListener('change', () => {
+  $html.classList.toggle('mar-mode')
+})
+
+$check.addEventListener('change', () => {
+  $html.classList.toggle('dark-mode2')
+})
 
 createTask.addEventListener("keypress",(event) => {
   if(event.keyCode == 13){
